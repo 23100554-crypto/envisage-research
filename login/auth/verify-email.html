@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Verify your email to finish creating your Envisage account." />
+    <title>Verify your email | Envisage</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../account-support-layout.css" />
+    <link rel="stylesheet" href="../verify-email.css" />
+  </head>
+  <body class="simple-page account-polished">
+    <main class="account-card verification-card">
+      <a class="brand account-brand" href="login.html"><span class="brand-mark">E</span><span>envisage</span></a>
+      <section id="verification-step" aria-labelledby="verification-title">
+        <p class="eyebrow">STEP 2 OF 2 · EMAIL VERIFICATION</p>
+        <div class="verification-symbol" aria-hidden="true">✉</div>
+        <h1 class="account-title" id="verification-title">Check your inbox</h1>
+        <p class="account-copy">Enter the OTP sent to <strong id="verification-email"></strong> to verify that this email belongs to you.</p>
+        <form id="verification-form">
+          <label for="verification-code">One-time verification code</label>
+          <input id="verification-code" name="otp" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6,10}" minlength="6" maxlength="10" aria-describedby="verification-help" required />
+          <p id="verification-help" class="verification-help">Use the latest code from your email. Check Spam if you cannot find it.</p>
+          <button id="verify-button" class="submit" type="submit">Verify email <span aria-hidden="true">→</span></button>
+        </form>
+        <button id="resend-code" class="lifecycle-button secondary" type="button">Resend OTP</button>
+        <button id="change-email" class="verification-link" type="button">Wrong email? Start again</button>
+        <p id="verification-message" class="form-message" role="status" aria-live="polite"></p>
+      </section>
+      <section id="verification-success" hidden aria-labelledby="success-title">
+        <div class="verification-symbol verified" aria-hidden="true">✓</div>
+        <p class="eyebrow">EMAIL VERIFIED</p>
+        <h1 class="account-title" id="success-title" tabindex="-1">You're all set!</h1>
+        <p class="account-copy">Your email is verified. Sign in with your email and password to finish setting up your profile.</p>
+        <a class="lifecycle-button verification-home" href="../landing/index.html">Back to homepage</a>
+        <p class="verification-help">Continue to the sign-in page.</p>
+      </section>
+      <section id="verification-missing" hidden aria-labelledby="missing-title">
+        <h1 class="account-title" id="missing-title">Start with your email</h1>
+        <p class="account-copy">Create an account first, or enter your email on the signup page to continue verification.</p>
+        <a class="lifecycle-button" href="register.html">Go to signup</a>
+      </section>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script src="../signup-flow.js"></script>
+    <script src="../verify-email.js"></script>
+  </body>
+</html>

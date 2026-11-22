@@ -1,0 +1,12 @@
+﻿.verification-card { text-align:center; }
+.verification-card form { text-align:left; }
+.verification-card [hidden] { display:none; }
+.verification-symbol { display:grid; place-items:center; width:64px; height:64px; border-radius:50%; background:#edf2df; color:#345741; margin:24px auto; font-size:30px; }
+.verification-symbol.verified { background:#dcebbd; }
+.verification-card .account-copy strong { display:block; color:var(--ink); overflow-wrap:anywhere; margin:6px 0; }
+#verification-code { text-align:center; font:600 27px/1.4 var(--font-mono); letter-spacing:.25em; padding:15px 10px; }
+.verification-help { font-size:12px; line-height:1.7; color:var(--muted); margin:12px 0 20px; }
+.verification-link { display:block; margin:18px auto 0; padding:6px; border:0; background:transparent; font:inherit; font-size:12px; color:var(--muted); text-decoration:underline; cursor:pointer; }
+.verification-home { margin-top:18px; }
+.verification-card button:disabled { opacity:.6; cursor:wait; }
+.verification-card :focus-visible { outline:3px solid #608f54; outline-offset:3px; }

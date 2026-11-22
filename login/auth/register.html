@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Create your Envisage account." />
+    <title>Create an account | Envisage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../account-support-layout.css" />
+      <link rel="stylesheet" href="../landing-enhancements.css" />
+  </head>
+  <body class="simple-page account-polished">
+    <main class="account-card">
+      <a class="brand account-brand" href="login.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <p class="eyebrow">JOIN ENVISAGE</p>
+      <h1 class="account-title">Create your account</h1>
+      <p class="account-copy">First, tell us how you’ll use Envisage.</p>
+      <div class="role-switch" role="group" aria-label="Choose account type">
+        <button class="role" type="button" data-role="client" aria-pressed="false">⌁ I’m a Client</button>
+        <button class="role" type="button" data-role="freelancer" aria-pressed="false">✦ I’m a Freelancer</button>
+      </div>
+      <form id="register-form">
+        <label for="name">Your name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="How should we call you?"
+          autocomplete="name"
+          maxlength="100"
+          required
+        />
+        <label for="register-email">Email address</label>
+        <input
+          id="register-email"
+          name="email"
+          type="email"
+          placeholder="you@gmail.com"
+          autocomplete="email"
+          required
+        />
+        <label for="register-password">Create a password</label>
+        <input
+          id="register-password"
+          name="password"
+          type="password"
+          minlength="8"
+          placeholder="At least 8 characters"
+          autocomplete="new-password"
+          required
+        />
+        <label for="confirm-password">Confirm password</label>
+        <input id="confirm-password" type="password" autocomplete="new-password" minlength="8" required />
+        <label class="remember"
+          ><input id="register-terms" type="checkbox" required /><span class="checkmark"></span> I agree to the
+          <a href="../legal/policies.html?return=register#terms">Terms</a> and
+          <a href="../legal/policies.html?return=register#privacy">Privacy Policy</a></label
+        >
+        <button class="submit" type="submit">Create account <span>→</span></button>
+      <p class="form-message" id="register-message" role="status"></p>
+      </form>
+      <p class="signup">Already a member? <a href="login.html">Sign in</a></p>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script src="../signup-flow.js"></script>
+    <script src="../register.js"></script>
+    <script src="../navigation-controls.js"></script>
+  </body>
+</html>
+

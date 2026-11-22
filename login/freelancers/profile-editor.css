@@ -1,0 +1,66 @@
+/* Approved freelancer profile editor layout and controls. */
+
+
+.profile-settings-page .account-card.profile-editor{width:min(900px,calc(100% - 64px));max-width:900px;padding:36px 40px;margin:28px auto}
+.profile-settings-page .account-title{font-size:38px;letter-spacing:-.7px;line-height:1.25}
+.profile-settings-page .account-copy{font-size:15px;line-height:1.75;max-width:680px}
+.profile-settings-page .availability-link{display:none}
+.profile-settings-page .profile-section{padding:26px;margin:28px 0}
+.profile-settings-page .profile-section>legend{font-size:20px;line-height:1.4}
+.profile-settings-page .profile-section label,.profile-settings-page .profile-section fieldset>legend{font-size:15px;line-height:1.6}
+.profile-settings-page .profile-section label small{font-size:13px}
+.profile-settings-page .section-help,.profile-settings-page .profile-section>p,.profile-settings-page .photo-upload p{font-size:14px;line-height:1.75}
+.profile-settings-page .profile-section input:not([type=checkbox]),.profile-settings-page .profile-section select,.profile-settings-page .profile-section textarea{font:400 15px/1.65 var(--font-body);padding:12px 14px;min-height:50px}
+.profile-settings-page .photo-upload{gap:22px;padding:22px}
+.profile-settings-page .photo-upload>div:last-child{min-width:0;flex:1}
+.profile-settings-page .profile-photo-preview{width:112px;height:112px;flex:0 0 112px;font-size:30px}
+.profile-settings-page .profile-photo-preview img{width:100%;height:100%;object-fit:cover}
+.profile-settings-page .service-options{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.profile-settings-page .service-options label{padding:12px;font-size:14px}
+.profile-settings-page .service-options input{flex-shrink:0}
+.profile-settings-page .submit{font:800 15px/1.6 var(--font-body);min-height:52px}
+.profile-settings-page .agreement-card{padding:24px}.profile-settings-page .agreement-card h2{font-size:23px;letter-spacing:-.4px}.profile-settings-page .agreement-card p{font-size:15px;line-height:1.75}
+
+@media(max-width:600px){.profile-settings-page .account-card.profile-editor{width:calc(100% - 28px);padding:24px 18px}.profile-settings-page .profile-section{padding:20px 14px}.profile-settings-page .account-title{font-size:30px}.profile-settings-page .photo-upload{padding:16px;gap:16px}.profile-settings-page .profile-photo-preview{width:96px;height:96px;flex-basis:96px}.profile-settings-page .service-options{grid-template-columns:1fr}}
+
+
+.profile-settings-page .photo-upload{grid-template-columns:112px minmax(0,1fr);column-gap:24px}
+.profile-settings-page .photo-upload input[type=file]{padding:6px 0;min-height:40px;font-size:14px;max-width:100%}
+.profile-settings-page .photo-upload input::file-selector-button{font:600 14px var(--font-body);padding:8px 12px;margin-right:10px;border:1px solid var(--line);border-radius:7px;background:#fffefa;color:var(--ink)}
+.profile-settings-page .profile-rate{display:flex;align-items:center;gap:12px;border:1px solid #d8dfdc;border-radius:8px;background:#fffefa;padding:0 14px;min-height:50px}
+.profile-settings-page .profile-rate>span{position:static;font:800 20px/1 var(--font-body);color:#315f54;flex-shrink:0}
+.profile-settings-page .profile-rate input{border:0;background:transparent;min-width:0;padding:11px 0;font-size:16px;box-shadow:none}
+.profile-settings-page .profile-rate:focus-within{outline:3px solid #dcece4;border-color:#628477}
+.profile-settings-page .service-options{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0}
+.profile-settings-page .service-options label{padding:0!important;margin:0!important;flex:0 0 auto}
+.profile-settings-page .service-options span{font:600 15px/1.4 var(--font-body);padding:8px 14px;min-height:38px}
+.profile-settings-page .service-options input:focus-visible+span{outline:3px solid #708958;outline-offset:3px}
+.profile-settings-page #select-all-services{margin:0 0 12px;padding:8px 12px;min-height:38px;font-size:14px}
+@media(max-width:600px){.profile-settings-page .photo-upload{grid-template-columns:96px minmax(0,1fr);column-gap:18px}}
+@media(max-width:480px){.profile-settings-page .photo-upload{grid-template-columns:minmax(0,1fr);gap:14px}}
+
+
+.profile-settings-page .account-card.profile-editor{padding:28px 32px;margin:24px auto}
+.profile-settings-page .back-link{margin-top:16px;margin-bottom:20px}
+.profile-settings-page .account-title{margin-top:0;margin-bottom:12px}
+.profile-settings-page .account-copy{margin-bottom:20px}
+.profile-settings-page .profile-section{padding:18px 20px;margin:20px 0}
+.profile-settings-page .profile-section>legend{margin-bottom:6px}
+.profile-settings-page .profile-section .section-help{margin-bottom:14px}
+.profile-settings-page .profile-section>label{margin-top:14px;margin-bottom:6px}
+.profile-settings-page .photo-upload{padding:16px 18px;margin-bottom:18px}
+.profile-settings-page .profile-section>fieldset{margin-top:18px;margin-bottom:16px;padding:0}
+.profile-settings-page .profile-payment-settings>p{margin:8px 0 14px}
+.profile-settings-page .profile-payment-settings p:empty,.profile-settings-page .form-message:empty{display:none}
+.profile-settings-page .agreement-card{padding:20px}
+.profile-settings-page .agreement-card h2{margin:0 0 12px}
+.profile-settings-page .agreement-card p{margin:0}
+.profile-settings-page #warnings + #client-reviews{margin-top:20px}
+@media(max-width:600px){.profile-settings-page .account-card.profile-editor{padding:22px 18px}.profile-settings-page .profile-section{padding:16px 12px;margin:18px 0}.profile-settings-page .photo-upload{padding:16px}}
+
+
+.profile-settings-page #profile-form + #warnings{margin-top:24px}
+.profile-settings-page #select-all-services{display:block;width:auto;min-height:0;margin:0 0 12px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;color:var(--ink);font:700 15px/1.6 var(--font-body);text-align:left;cursor:pointer}
+.profile-settings-page #select-all-services:hover{text-decoration:underline;text-underline-offset:3px;background:transparent}
+.profile-settings-page #freelancer-logout{font:700 16px/1.5 var(--font-body);color:#b42318;min-height:46px;padding:11px 16px}
+.profile-settings-page #freelancer-logout:hover{background:#fff2f0;border-color:#e0aaa5}

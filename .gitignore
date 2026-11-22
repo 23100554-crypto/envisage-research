@@ -1,0 +1,8 @@
+.tools/
+sites/
+.vscode/
+.env
+.env.*
+!.env.example
+node_modules/
+_site/

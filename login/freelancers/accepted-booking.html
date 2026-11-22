@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accepted booking | Envisage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../workspace-layout.css" />
+    <link rel="stylesheet" href="../profile-booking-layout.css" />
+  </head>
+  <body class="booking-page workspace-polished">
+    <header class="app-header">
+      <a class="brand" href="availability.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <nav>
+        <a href="availability.html">Availability</a>
+        <a class="active" href="bookings.html">My bookings</a>
+        <a href="inquiries.html">Messages</a>
+        <a href="profile.html">Profile</a>
+        <a href="notifications.html">Notifications</a>
+      </nav>
+      <button class="user-chip freelancer-logout-control" type="button" data-workspace-logout="../auth/login.html">
+        Log out
+      </button>
+    </header>
+    <main class="accepted-main">
+      <a class="back-link" href="bookings.html">← Back to bookings</a>
+      <div id="accepted-booking"></div>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="../booking-documents.js"></script>
+    <script data-app-src="../booking-chat-payments.js"></script>
+    <script data-app-src="../booking-form-controls.js"></script>
+    <script data-app-src="../review-controls.js"></script>
+    <script data-app-src="../booking-detail.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>

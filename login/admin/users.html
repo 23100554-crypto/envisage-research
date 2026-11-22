@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User management | Envisage</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="admin-page">
+    <header class="app-header">
+      <a class="brand" href="dashboard.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <nav>
+        <a href="dashboard.html">Overview</a><a class="active" href="users.html">Users</a
+        ><a href="transactions.html">Bookings / Projects</a>
+      </nav>
+      <button class="user-chip" id="admin-logout" type="button">Log out</button>
+    </header>
+    <main class="admin-main">
+      <a class="back-link" href="dashboard.html">← Back to admin dashboard</a>
+      <div class="admin-heading">
+        <div>
+          <p class="eyebrow">USER MANAGEMENT</p>
+          <h1>Account access<br /><em>with a record.</em></h1>
+        </div>
+        <p>
+          View registered accounts and record account warnings. Only administrators can access this list.
+        </p>
+      </div>
+      <input class="admin-search" id="user-search" placeholder="Search client or freelancer name" />
+      <div class="admin-user-list" id="user-list"></div>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="users.js"></script>
+    <script data-app-src="admin-session.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>
+

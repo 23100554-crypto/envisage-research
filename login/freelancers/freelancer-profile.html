@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative profile | Envisage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../workspace-layout.css" />
+    <link rel="stylesheet" href="profile-editor.css" />
+  </head>
+  <body class="simple-page profile-settings-page workspace-polished">
+    <header class="app-header">
+      <a class="brand" href="availability.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <nav>
+        <a href="availability.html">Availability</a>
+        <a href="bookings.html">My bookings</a>
+        <a href="inquiries.html">Messages</a>
+        <a class="active" href="profile.html">Profile</a>
+        <a href="notifications.html">Notifications</a>
+      </nav>
+      <button class="user-chip freelancer-logout-control" type="button" data-workspace-logout="../auth/login.html">
+        Log out
+      </button>
+    </header>
+    <main class="account-card profile-editor">
+      <a class="brand account-brand" href="availability.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <a class="back-link" href="availability.html">← Back to workspace</a>
+      <h1 class="account-title">Edit the profile clients see.</h1>
+      <p class="account-copy">
+        Your photo, overview, services, and portfolio help clients decide who to contact.
+      </p>
+      <form id="profile-form"><fieldset class="profile-section"><legend>Public profile</legend><p class="section-help">Introduce yourself to potential clients.</p>
+        <div class="photo-upload">
+          <div class="profile-photo-preview" id="profile-photo-preview" aria-hidden="true">
+            <span id="profile-photo-initials">PP</span
+            ><img id="profile-photo-image" alt="Profile photo preview" hidden />
+          </div>
+          <div>
+            <label for="profile-photo">Profile photo <small>(optional)</small></label
+            ><input id="profile-photo" type="file" accept="image/png,image/jpeg,image/webp" />
+            <p>Use a clear face photo. It will be cropped into a circle for clients.</p>
+          </div>
+        </div>
+        <label for="display-name">Display name</label
+        ><input
+          id="display-name"
+          type="text"
+          autocomplete="name"
+          placeholder="e.g. Maria Ortega"
+          required
+        />
+        <label for="profile-headline"
+          >Professional headline <small>(short and memorable)</small></label
+        ><input
+          id="profile-headline"
+          type="text"
+          maxlength="80"
+          placeholder="e.g. Quietly cinematic wedding films."
+        />
+        <label for="profile-description">Overview</label
+        ><textarea
+          id="profile-description"
+          rows="3"
+          placeholder="Describe your style, experience, and the events you enjoy covering."
+          required
+        ></textarea>
+        </fieldset><fieldset class="profile-section"><legend>Location & services</legend><p class="section-help">Let clients know where you work and what you offer.</p>
+        <label for="profile-location">Location / service area</label
+        ><input
+          id="profile-location"
+          type="text"
+          placeholder="e.g. San Pedro, Laguna and nearby"
+          required
+        />
+        <label for="profile-address">Address <small>(optional)</small></label
+        ><input
+          id="profile-address"
+          type="text"
+          placeholder="House/unit, street, subdivision"
+          autocomplete="street-address"
+        />
+        <label for="profile-facebook">Facebook account name <small>(optional)</small></label
+        ><input
+          id="profile-facebook"
+          type="text"
+          placeholder="e.g. Maria Santos"
+          autocomplete="off"
+        />
+        <label for="starting-rate">Starting rate</label>
+        <div class="currency-input profile-rate">
+          <span>₱</span
+          ><input
+            id="starting-rate" type="text" data-currency data-minimum="1"
+            min="1"
+            step="1"
+            inputmode="decimal"
+            placeholder="e.g. 5000"
+            required
+          />
+        </div>
+        <fieldset>
+          <legend>Forte / services offered</legend>
+          <p class="section-help">Select only services you offer. These appear on your profile and help clients find you. Save your profile to apply changes.</p>
+          <button type="button" id="select-all-services" class="service-selection-shortcut" disabled>Select all services</button>
+          <div class="service-options">
+            <label><input type="checkbox" value="Photography" /><span>Photography</span></label
+            ><label><input type="checkbox" value="Videography" /><span>Videography</span></label
+            ><label><input type="checkbox" value="Editing" /><span>Editing</span></label>
+          </div>
+        </fieldset>
+        <label for="portfolio-url">Portfolio link <small>(optional)</small></label
+        ><input id="portfolio-url" type="url" placeholder="https://your-portfolio.com" />
+        </fieldset><fieldset class="profile-payment-settings profile-section">
+          <legend>Payment QR code</legend>
+          <p>Upload the QR from your bank or e-wallet. This will be used for your booking payments.</p>
+          <label for="profile-payment-payee">Payment account name (optional)</label>
+          <input id="profile-payment-payee" type="text" maxlength="150" autocomplete="off" placeholder="Name shown in your payment account" />
+          <label for="profile-payment-qr">Upload payment QR code (optional)</label>
+          <input id="profile-payment-qr" type="file" accept="image/png,image/jpeg,image/webp" />
+          <p>PNG, JPEG or WebP, up to 1 MB. Upload a clear, uncropped QR.</p>
+          <img id="profile-payment-qr-preview" class="payment-qr-preview" alt="Your saved payment QR" hidden />
+          <p id="profile-payment-qr-status" role="status"></p>
+        </fieldset>
+        <button class="submit" type="submit">Save & continue to availability <span>→</span></button>
+        <p class="form-message" role="status"></p>
+      </form>
+      <section id="warnings" class="agreement-card"><h2>Admin warnings</h2><div id="profile-warnings" role="status"></div></section>
+      <section id="client-reviews" class="agreement-card"><h2>Client reviews</h2><div id="profile-reviews"></div></section>
+      <button class="logout-button freelancer-logout-control" id="freelancer-logout" type="button">Log out</button>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="../booking-form-controls.js"></script>
+    <script data-app-src="freelancer-profile.js"></script>
+    <script data-app-src="../reviews.js"></script>
+    <script data-app-src="freelancer-feedback.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>

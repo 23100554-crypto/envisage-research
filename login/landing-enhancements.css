@@ -1,0 +1,37 @@
+/* Landing-only sizing and responsive layout. Original font families are inherited. */
+.landing-page .landing-nav,.landing-page .landing-hero,.landing-page .landing-process,.landing-page .landing-features,.landing-page .creative-cta,.landing-page .landing-audiences,.landing-page .landing-join,.landing-page .landing-faq,.landing-page .landing-footer{width:min(1480px,calc(100% - 48px))}
+.landing-page .landing-nav{min-height:64px;flex-wrap:wrap;gap:16px;padding:12px 20px}
+.landing-page .landing-nav nav{flex-wrap:wrap;justify-content:center;gap:20px}
+.landing-page .landing-nav nav a,.landing-page .nav-sign-in,.landing-page .nav-join{font-size:14px}
+.landing-page .hero-primary,.landing-page .hero-secondary{font-size:15px;min-height:46px;display:inline-flex;align-items:center}
+.landing-page .landing-hero-copy>p:last-of-type{font-size:17px;max-width:560px}
+.landing-page .landing-section-intro>p:last-child,.landing-page .landing-story-process li span,.landing-page .landing-why-grid p,.landing-page .audience-grid p,.landing-page .landing-join>p,.landing-page .landing-faq p{font-size:16px;line-height:1.75}
+.landing-page .landing-story-process li b,.landing-page .landing-faq summary{font-size:17px;line-height:1.6}
+.landing-page .join-choice-grid a{font-size:17px}
+.landing-page .join-choice-grid small,.landing-page .join-sign-in{font-size:15px}
+.landing-page .landing-story-footer{display:grid;grid-template-columns:minmax(240px,1.3fr) minmax(180px,1fr) minmax(210px,1fr);gap:40px;padding:40px 0;margin-top:36px;border-top:1px solid var(--line)}
+.landing-page .landing-story-footer>div{display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-width:0}
+.landing-page .landing-story-footer p{font-size:15px;line-height:1.75;max-width:400px;margin:0}
+.landing-page .landing-story-footer small{font-size:13px;line-height:1.6}
+.landing-page .landing-story-footer b,.landing-page .landing-story-footer a:not(.brand){font-size:14px;line-height:1.65;overflow-wrap:anywhere}
+.landing-page .landing-auth-dialog{width:min(640px,calc(100% - 32px));max-height:calc(100svh - 32px)}
+.landing-page .landing-auth-dialog iframe{height:min(820px,calc(100svh - 34px))}
+.landing-page .landing-auth-close{width:40px;height:40px;right:8px;top:8px;display:grid;place-items:center;background:#f8f7f2;border-radius:50%}
+.auth-modal-page.signin-page .login-panel,.auth-modal-page.simple-page .account-card{padding:48px 40px 32px}
+.auth-modal-page.signin-page .login-heading{margin-bottom:28px}
+.auth-modal-page .login-heading h2,.auth-modal-page .account-title{font-size:32px;line-height:1.25}
+.auth-modal-page label,.auth-modal-page .role,.auth-modal-page .submit{font-size:15px}
+.auth-modal-page input:not([type=checkbox]){font-size:16px;min-height:48px}
+.auth-modal-page .signup,.auth-modal-page .forgot,.auth-modal-page .remember,.auth-modal-page.signin-page .terms{font-size:14px;line-height:1.7}
+.auth-modal-page .field{margin-bottom:18px}
+.auth-modal-page .submit{min-height:48px;margin-top:16px}
+@media(max-width:1000px){.landing-page .landing-nav nav{order:3;width:100%}.landing-page .landing-story-footer{grid-template-columns:1fr 1fr}.landing-page .landing-story-footer>div:first-child{grid-column:1/-1}}
+@media(max-width:600px){.landing-page .landing-nav,.landing-page .landing-hero,.landing-page .landing-process,.landing-page .landing-features,.landing-page .creative-cta,.landing-page .landing-audiences,.landing-page .landing-join,.landing-page .landing-faq,.landing-page .landing-footer{width:calc(100% - 32px)}.landing-page .landing-nav{padding:12px;gap:12px}.landing-page .landing-nav nav{gap:12px}.landing-page .landing-nav nav a,.landing-page .landing-nav .nav-sign-in,.landing-page .landing-nav .nav-join{font-size:13px}.landing-page .landing-nav>div{gap:8px}.landing-page .landing-story-footer{grid-template-columns:1fr;gap:28px}.landing-page .landing-story-footer>div:first-child{grid-column:auto}.landing-page .hero-actions{flex-wrap:wrap}.auth-modal-page.signin-page .login-panel,.auth-modal-page.simple-page .account-card{padding:48px 24px 28px}.auth-modal-page .login-heading h2,.auth-modal-page .account-title{font-size:28px}}
+
+
+.auth-modal-page form label,.auth-modal-page .role-switch .role,.auth-modal-page form .submit{font-size:15px}
+.auth-modal-page form input:not([type=checkbox]){font-size:16px}
+
+.auth-modal-page #login-form > label,.auth-modal-page #login-form > label.remember{font-size:15px}
+.auth-modal-page #login-form input:not([type=checkbox]){font-size:16px}
+.auth-modal-page #login-form .submit{font-size:15px}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking helpdesk | Envisage</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../account-support-layout.css" />
+  </head>
+  <body class="helpdesk-page support-polished">
+    <header class="app-header">
+      <a class="brand" href="../clients/discovery.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <nav>
+        <a href="../clients/discovery.html">Discover</a><a href="../legal/policies.html">Policies</a
+        ><a class="active" href="helpdesk.html">Helpdesk</a>
+      </nav>
+      <a class="user-chip" href="../clients/client-profile.html">Client account ↗</a>
+    </header>
+    <main class="helpdesk-main">
+      <a class="back-link" href="../clients/discovery.html">← Back to workspace</a>
+      <div class="helpdesk-heading">
+        <p class="eyebrow">BOOKING HELPDESK</p>
+        <h1>Need help with a<br /><em>specific booking?</em></h1>
+        <p>
+          Send a booking issue to the Envisage admin team. The administrator can review the booking
+          record and ask each party for clarification.
+        </p>
+      </div>
+      <div class="helpdesk-layout">
+        <form class="helpdesk-form" id="helpdesk-form">
+          <p class="eyebrow">CREATE A CASE</p>
+          <label for="booking-id">Booking reference</label
+          ><input id="booking-id" type="text" placeholder="e.g. ENV-2026-0001" required />
+          <label for="reporter-role">I am a</label
+          ><select id="reporter-role" required>
+            <option value="" selected disabled>Select your role</option>
+            <option>Client</option>
+            <option>Freelancer</option>
+          </select>
+          <label for="issue-type">What happened?</label
+          ><select id="issue-type" required>
+            <option value="" selected disabled>Select an issue</option>
+            <option>No-show</option>
+            <option>Missed payment</option>
+            <option>Service not delivered</option>
+            <option>Cancellation</option>
+            <option>Misleading information</option>
+            <option>Other</option>
+          </select>
+          <label for="issue-details">Explain what happened</label
+          ><textarea
+            id="issue-details"
+            rows="5"
+            placeholder="Include relevant dates, messages, and the outcome you are requesting."
+            required
+          ></textarea>
+          <label for="evidence"
+            >Supporting evidence <small>(optional; screenshots or receipts)</small></label
+          ><input id="evidence" type="file" accept="image/*,.pdf" />
+          <button class="submit" type="submit">Send to Envisage helpdesk <span>→</span></button>
+          <p class="form-message" id="case-message" role="status"></p>
+        </form>
+        <aside class="case-guide">
+          <p class="eyebrow">WHAT HAPPENS NEXT</p>
+          <ol>
+            <li>
+              <b>Case received</b><span>Your report is recorded with the booking reference.</span>
+            </li>
+            <li>
+              <b>Admin review</b
+              ><span
+                >An administrator checks the booking intake, chat, agreement, and payment
+                status.</span
+              >
+            </li>
+            <li>
+              <b>Clarification</b
+              ><span>The admin may ask the client and freelancer for additional information.</span>
+            </li>
+            <li>
+              <b>Outcome recorded</b
+              ><span
+                >Envisage records any platform-rule action, such as a warning or account
+                restriction.</span
+              >
+            </li>
+          </ol>
+          <p class="case-limit">
+            <strong>Important:</strong> Envisage does not decide legal claims, order refunds, or
+            process payments. Preserve your records for direct or external resolution.
+          </p>
+        </aside>
+      </div>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="../helpdesk.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>

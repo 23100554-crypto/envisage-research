@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helpdesk case | Envisage</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="admin-page">
+    <header class="app-header">
+      <a class="brand" href="dashboard.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <nav>
+        <a class="active" href="dashboard.html">Cases</a><a href="users.html">Users</a
+        ><a href="transactions.html">Transactions</a>
+      </nav>
+      <button class="user-chip" id="admin-logout" type="button">Log out</button>
+    </header>
+    <main class="booking-main">
+      <a class="back-link" href="dashboard.html#case-queue">← Back to case queue</a>
+      <div id="case-thread"></div>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="case-thread.js"></script>
+    <script data-app-src="admin-session.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>

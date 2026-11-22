@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freelancer profile | Envisage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../workspace-layout.css" />
+    <link rel="stylesheet" href="../profile-booking-layout.css" />
+  </head>
+  <body class="booking-page workspace-polished">
+    <header class="app-header">
+      <a class="brand" href="discovery.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <nav>
+        <a class="active" href="discovery.html">Discover</a
+        ><a href="client-bookings.html">My bookings</a><a href="client-messages.html">Messages</a
+        ><a href="client-profile.html">Profile</a>
+      </nav>
+      <button class="user-chip" type="button" data-workspace-logout="../auth/login.html">
+        Log out
+      </button>
+    </header>
+    <main class="creative-profile-page">
+      <a class="back-link public-back" href="discovery.html">← Back to discovery</a>
+      <div id="public-profile"></div>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="../reviews.js"></script>
+    <script data-app-src="../freelancer-work.js"></script>
+    <script data-app-src="../cover-editor.js"></script>
+    <script data-app-src="freelancer-view.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>

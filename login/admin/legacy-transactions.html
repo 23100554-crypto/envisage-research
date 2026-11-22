@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legacy transaction log | Envisage</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="admin-page">
+    <header class="app-header">
+      <a class="brand" href="dashboard.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <nav>
+        <a href="dashboard.html">Overview</a><a href="users.html">Users</a
+        ><a class="active" href="transactions.html">Transactions</a>
+      </nav>
+      <a class="user-chip" href="dashboard.html">Admin workspace ↗</a>
+    </header>
+    <main class="admin-main">
+      <a class="back-link" href="transactions.html">← Open current transaction log</a>
+      <div class="admin-heading">
+        <div>
+          <p class="eyebrow">LEGACY COPY</p>
+          <h1>Booking records,<br /><em>not payment processing.</em></h1>
+        </div>
+        <p>
+          This preserved copy is not linked from the application. Use the current transaction log
+          from the admin workspace.
+        </p>
+      </div>
+      <div class="admin-user-list" id="transaction-list"></div>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="transactions.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>

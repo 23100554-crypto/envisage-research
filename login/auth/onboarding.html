@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Set up your Envisage account." />
+    <title>Set up your account | Envisage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../account-support-layout.css" />
+  </head>
+  <body class="simple-page account-polished">
+    <main class="account-card onboarding-card">
+      <a class="brand account-brand" href="login.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <p class="eyebrow">STEP 1 OF 2</p>
+      <h1 class="account-title" id="welcome-title">Let’s set up your account.</h1>
+      <p class="account-copy" id="onboarding-copy">
+        A few details will help us tailor Envisage to you.
+      </p>
+      <form id="onboarding-form">
+        <div id="client-fields">
+          <div class="photo-upload">
+            <div class="profile-photo-preview">
+              <span id="client-photo-initials">C</span
+              ><img id="client-photo-image" alt="Client profile preview" hidden />
+            </div>
+            <div>
+              <label for="client-photo">Profile photo <small>(optional)</small></label
+              ><input id="client-photo" type="file" accept="image/jpeg,image/png,image/webp" />
+              <p>You can add a photo now or later from your profile.</p>
+            </div>
+          </div>
+          <label for="client-name-confirm">Your name</label
+          ><input id="client-name-confirm" type="text" autocomplete="name" required />
+          <label for="client-phone">Mobile number <small>(optional)</small></label
+          ><input
+            id="client-phone"
+            type="tel"
+            placeholder="e.g. 0917 123 4567"
+            autocomplete="tel"
+          />
+          <label for="client-barangay">Usual barangay</label
+          ><select id="client-barangay" required>
+            <option value="" selected disabled>Choose a barangay</option>
+            <option>Bagong Silang</option>
+            <option>Calendola</option>
+            <option>Chrysanthemum</option>
+            <option>Cuyab</option>
+            <option>Estrella</option>
+            <option>Fatima</option>
+            <option>G.S.I.S.</option>
+            <option>Landayan</option>
+            <option>Langgam</option>
+            <option>Laram</option>
+            <option>Magsaysay</option>
+            <option>Maharlika</option>
+            <option>Narra</option>
+            <option>Nueva</option>
+            <option>Pacita 1</option>
+            <option>Pacita 2</option>
+            <option>Poblacion</option>
+            <option>Riverside</option>
+            <option>Rosario</option>
+            <option>Sampaguita Village</option>
+            <option>San Antonio</option>
+            <option>San Lorenzo Ruiz</option>
+            <option>San Roque</option>
+            <option>San Vicente</option>
+            <option>Santo Niño</option>
+            <option>United Bayanihan</option>
+            <option>United Better Living</option>
+          </select>
+          <label for="client-address">Address <small>(optional)</small></label
+          ><input
+            id="client-address"
+            type="text"
+            placeholder="House/unit, street, subdivision"
+            autocomplete="street-address"
+          />
+          <label for="client-facebook">Facebook account name <small>(optional)</small></label
+          ><input
+            id="client-facebook"
+            type="text"
+            placeholder="e.g. Maria Santos"
+            autocomplete="off"
+          />
+        </div>
+        <div id="freelancer-fields" hidden>
+          <label for="service">Your main service</label>
+          <select id="service" name="service">
+            <option value="" selected disabled>Select your service</option>
+            <option>Photography</option>
+            <option>Videography</option>
+            <option>Editing</option>
+          </select>
+          <label for="creative-location">Your service area</label>
+          <input
+            id="creative-location"
+            name="creative-location"
+            type="text"
+            placeholder="Choose a San Pedro barangay"
+          />
+        </div>
+        <button class="submit" type="submit">Continue <span>→</span></button>
+        <p class="form-message" id="onboarding-message" role="status"></p>
+      </form>
+      <p class="signup">You can finish the rest of your profile later.</p>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="../onboarding.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>

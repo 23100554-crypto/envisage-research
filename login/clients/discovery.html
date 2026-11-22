@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Find creative freelancers near you with Envisage." />
+    <title>Discover creatives | Envisage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../workspace-layout.css" />
+    <link rel="stylesheet" href="../profile-booking-layout.css" />
+    <link rel="stylesheet" href="../assets/vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="discovery-map.css" />
+  </head>
+  <body class="discovery-page approved-layout workspace-polished">
+    <header class="app-header">
+      <a class="brand" href="discovery.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <nav aria-label="Main navigation">
+        <a class="active" href="discovery.html">Discover</a
+        ><a href="client-bookings.html">My bookings</a><a href="client-messages.html">Messages</a
+        ><a href="client-profile.html">Profile</a>
+      </nav>
+      <button class="user-chip" type="button" data-workspace-logout="../auth/login.html">
+        Log out
+      </button>
+    </header>
+
+    <main class="discovery-main">
+      <div class="discovery-layout">
+        <aside class="location-sidebar" aria-label="Choose a San Pedro barangay">
+          <p class="eyebrow">YOUR LOCATION</p>
+          <h2>San Pedro<br />Laguna</h2>
+          <p class="sidebar-copy">Choose a barangay to see creatives who serve that area.</p>
+          <div class="barangay-list">
+            <button class="barangay-option active" type="button" data-barangay="All San Pedro">
+              All barangays</button
+            ><button class="barangay-option" type="button" data-barangay="Bagong Silang">
+              Bagong Silang</button
+            ><button class="barangay-option" type="button" data-barangay="Calendola">
+              Calendola</button
+            ><button class="barangay-option" type="button" data-barangay="Chrysanthemum">
+              Chrysanthemum</button
+            ><button class="barangay-option" type="button" data-barangay="Cuyab">Cuyab</button
+            ><button class="barangay-option" type="button" data-barangay="Estrella">Estrella</button
+            ><button class="barangay-option" type="button" data-barangay="Fatima">Fatima</button
+            ><button class="barangay-option" type="button" data-barangay="G.S.I.S.">G.S.I.S.</button
+            ><button class="barangay-option" type="button" data-barangay="Landayan">Landayan</button
+            ><button class="barangay-option" type="button" data-barangay="Langgam">Langgam</button
+            ><button class="barangay-option" type="button" data-barangay="Laram">Laram</button
+            ><button class="barangay-option" type="button" data-barangay="Magsaysay">
+              Magsaysay</button
+            ><button class="barangay-option" type="button" data-barangay="Maharlika">
+              Maharlika</button
+            ><button class="barangay-option" type="button" data-barangay="Narra">Narra</button
+            ><button class="barangay-option" type="button" data-barangay="Nueva">Nueva</button
+            ><button class="barangay-option" type="button" data-barangay="Pacita 1">Pacita 1</button
+            ><button class="barangay-option" type="button" data-barangay="Pacita 2">Pacita 2</button
+            ><button class="barangay-option" type="button" data-barangay="Poblacion">
+              Poblacion</button
+            ><button class="barangay-option" type="button" data-barangay="Riverside">
+              Riverside</button
+            ><button class="barangay-option" type="button" data-barangay="Rosario">Rosario</button
+            ><button class="barangay-option" type="button" data-barangay="Sampaguita Village">
+              Sampaguita Village</button
+            ><button class="barangay-option" type="button" data-barangay="San Antonio">
+              San Antonio</button
+            ><button class="barangay-option" type="button" data-barangay="San Lorenzo Ruiz">
+              San Lorenzo Ruiz</button
+            ><button class="barangay-option" type="button" data-barangay="San Roque">
+              San Roque</button
+            ><button class="barangay-option" type="button" data-barangay="San Vicente">
+              San Vicente</button
+            ><button class="barangay-option" type="button" data-barangay="Santo Niño">
+              Santo Niño</button
+            ><button class="barangay-option" type="button" data-barangay="United Bayanihan">
+              United Bayanihan</button
+            ><button class="barangay-option" type="button" data-barangay="United Better Living">
+              United Better Living
+            </button>
+          </div>
+        </aside>
+        <div class="results-column">
+          <div class="discovery-top">
+            <div class="discover-heading">
+              <p class="eyebrow" id="selected-barangay">ALL OF SAN PEDRO, LAGUNA</p>
+              <h1>Discover creatives</h1>
+              <p>Find local talent and start a conversation.</p>
+            </div>
+            <div class="search-creatives">
+              <label for="creative-search">Search creatives</label>
+              <input id="creative-search" type="search" placeholder="Name, service, or style…" />
+            </div>
+          </div>
+          <div class="filters" aria-label="Freelancer filters">
+            <button type="button" class="filter active">All services</button
+            ><button type="button" class="filter">Photography</button
+            ><button type="button" class="filter">Videography</button
+            ><button type="button" class="filter">Editing</button
+            >
+          </div>
+          <section class="discovery-map-section" aria-labelledby="map-title">
+            <div class="discovery-map-heading">
+              <div><p class="eyebrow">CREATIVES CLOSE TO HOME</p><h2 id="map-title">Explore San Pedro</h2><p id="map-home-label"></p></div>
+              <div class="map-actions"><button id="map-my-area" type="button">Center on my area</button><button id="map-city" type="button">All San Pedro</button></div>
+            </div>
+            <div class="map-frame"><div id="freelancer-map" role="region" aria-label="San Pedro freelancer map. Use the zoom buttons or keyboard to explore."></div><div class="map-footer-actions"><button id="map-expand" type="button" aria-controls="freelancer-map" aria-expanded="false">Expand map ↗</button></div></div>
+            <p id="map-status" role="status">Loading the map…</p>
+            <p class="map-note">Tap a profile photo to meet a creative. Pins represent saved barangays, not exact addresses or live locations. Nearby distances are estimates between barangay reference points.</p>
+            <div class="nearby-heading"><h3>Nearby creatives</h3><a href="client-profile.html">Update my location ↗</a></div>
+            <div id="nearby-freelancers" class="nearby-freelancers"></div>
+          </section>
+          <section class="profile-grid" aria-label="Available creative freelancers"><p role="status">Loading freelancers…</p></section>
+        </div>
+      </div>
+    </main>
+
+    <dialog class="inquiry-thread" id="inquiry-thread" aria-labelledby="thread-title">
+      <div class="thread-header">
+        <div class="thread-avatar" id="thread-avatar">MO</div>
+        <div>
+          <h2 id="thread-title"></h2>
+          <p>Private booking inquiry</p>
+        </div>
+        <button class="modal-close" type="button" aria-label="Close inquiry thread">×</button>
+      </div>
+      <div class="thread-messages">
+        <p class="thread-date">TODAY</p>
+        <div class="message message-received">
+          Hi! Thanks for your interest. Send a message first, or share booking details whenever
+          you’re ready.
+        </div>
+        <div class="message message-system">
+          Your inquiry is only visible to you and <span id="thread-creative"></span>.
+        </div>
+      </div>
+      <form class="thread-composer" id="chat-message-form">
+        <label class="visually-hidden" for="chat-message">Message</label
+        ><input id="chat-message" type="text" placeholder="Write a message…" required /><button
+          type="submit"
+        >
+          Send message
+        </button>
+      </form>
+      <button class="request-booking-toggle" id="request-booking-toggle" type="button">
+        Request booking →
+      </button>
+      <form class="intake-message" id="booking-form">
+        <details class="booking-details" id="booking-details">
+          <summary>Booking request details</summary>
+          <div class="booking-details-content">
+            <div class="form-row">
+              <div>
+                <label for="event-type">Event type</label
+                ><select id="event-type" required>
+                  <option value="" selected disabled>Choose one</option>
+                  <option>Wedding</option>
+                  <option>Debut</option>
+                  <option>Birthday</option>
+                  <option>Corporate event</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="event-date">Event date</label
+                ><input id="event-date" type="date" required />
+              </div>
+            </div>
+            <div id="other-event-wrap" hidden>
+              <label for="other-event-type">Tell the freelancer about your event</label
+              ><input
+                id="other-event-type"
+                type="text"
+                placeholder="e.g. Graduation, baptism, product launch"
+              />
+            </div>
+            <fieldset class="request-services">
+              <legend>Services needed</legend>
+              <label
+                ><input type="checkbox" name="requested-service" value="Photography" />
+                <span>Photography</span></label
+              ><label
+                ><input type="checkbox" name="requested-service" value="Videography" />
+                <span>Videography</span></label
+              ><label
+                ><input type="checkbox" name="requested-service" value="Editing" />
+                <span>Editing</span></label
+              >
+            </fieldset>
+            <label for="event-location">Event barangay / venue</label
+            ><input
+              id="event-location"
+              type="text"
+              placeholder="e.g. Pacita 1, San Pedro"
+              required
+            />
+
+            <div class="form-row">
+              <div>
+                <label for="budget">Budget amount</label>
+                <div class="currency-input">
+                  <span>₱</span
+                  ><input
+                    id="budget"
+                    type="text"
+                    data-currency
+                    data-minimum="1"
+                    inputmode="decimal"
+                    placeholder="e.g. 8,500"
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <label for="details">Message</label
+                ><input id="details" type="text" placeholder="Coverage needed" />
+              </div>
+            </div>
+            <button class="thread-send" type="submit">Send inquiry details <span>↑</span></button>
+          </div>
+        </details>
+        <p class="booking-status" role="status"></p>
+      </form>
+    </dialog>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="../assets/vendor/leaflet/leaflet.js"></script>
+    <script data-app-src="../assets/maps/san-pedro.js"></script>
+    <script data-app-src="../assets/maps/san-pedro-streets.js"></script>
+    <script data-app-src="discovery-map.js"></script>
+    <script data-app-src="../booking-form-controls.js"></script>
+    <script data-app-src="discovery.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>
+

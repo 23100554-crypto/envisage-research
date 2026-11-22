@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin dashboard | Envisage</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="admin-panel.css" />
+</head>
+<body class="admin-panel">
+  <aside class="admin-sidebar">
+    <a class="brand" href="dashboard.html"><span class="brand-mark">E</span><span>envisage</span></a>
+    <p class="eyebrow">ADMIN PANEL</p>
+    <nav aria-label="Admin navigation" id="admin-nav">
+      <a href="#dashboard">⌂ <span>Dashboard</span></a>
+      <a href="#users">♙ <span>Users</span></a>
+      <a href="#freelancers">◎ <span>Freelancers</span></a>
+      <a href="#clients">♧ <span>Clients</span></a>
+      <a href="#bookings">▤ <span>Bookings / Projects</span></a>
+      <a href="#services">◇ <span>Services</span></a>
+      <a href="#reports">⚑ <span>Reports & Complaints</span></a>
+      <a href="#messages">▢ <span>Messages</span></a>
+      <a href="#notifications">◉ <span>Notifications</span></a>
+      <a href="#settings">⚙ <span>Settings</span></a>
+    </nav>
+    <button id="admin-logout" type="button">↗ Log out</button>
+    <small>Envisage administration</small>
+  </aside>
+  <main class="admin-content">
+    <header class="admin-topbar"><span>WORKSPACE / <b id="section-label">Dashboard</b></span><span id="admin-name"></span></header>
+    <div class="admin-page-heading"><div><h1 id="page-title">Dashboard</h1><p id="page-description">Your community, at a glance.</p></div><button id="refresh-panel" type="button">↻ Refresh</button></div>
+    <p id="panel-status" role="status" aria-live="polite"></p>
+    <section id="panel-content" aria-label="Admin workspace"></section>
+  </main>
+  <dialog id="admin-dialog" aria-label="Account or report details"><div id="dialog-content"></div><p id="dialog-status" role="status"></p><button id="close-dialog" type="button">Close</button></dialog>
+  <script src="../supabase-config.js"></script>
+  <script src="../backend.js"></script>
+  <script data-app-src="admin-dashboard.js"></script>
+  <script data-app-src="admin-session.js"></script>
+  <script src="../workspace.js"></script>
+</body>
+</html>

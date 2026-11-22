@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My creative profile | Envisage</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../workspace-layout.css" />
+  </head>
+  <body class="booking-page creative-hub-page approved-layout workspace-polished">
+    <header class="app-header">
+      <a class="brand" href="availability.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <nav>
+        <a href="availability.html">Availability</a>
+        <a href="bookings.html">My bookings</a>
+        <a href="inquiries.html">Messages</a>
+        <a class="active" href="profile.html">Profile</a>
+        <a href="notifications.html">Notifications</a>
+      </nav>
+      <button class="user-chip freelancer-logout-control" type="button" data-workspace-logout="../auth/login.html">
+        Log out
+      </button>
+    </header>
+    <main class="creative-hub-main">
+      <section class="creative-hub-cover" id="creative-cover">
+        <button class="cover-edit" id="edit-cover" type="button" disabled>Edit cover</button>
+      </section>
+      <p class="visually-hidden" id="cover-status" role="status"></p>
+      <section class="creative-hub-identity" id="creative-identity"></section>
+      <div class="creative-hub-layout">
+        <aside class="creative-hub-side" id="creative-profile-details"></aside>
+        <section class="creative-hub-feed">
+          <form class="creative-post-composer" id="create-post-form">
+            <div class="composer-heading">
+              <strong>Share your latest work</strong><span>Clients can see these posts on your profile.</span>
+            </div>
+            <textarea
+              id="post-caption"
+              rows="3"
+              placeholder="Write a short caption about this project…"
+            ></textarea>
+            <input id="post-link" type="url" placeholder="Portfolio or video link (optional)" />
+            <div class="composer-actions">
+              <label class="post-media-button" for="post-media"
+                >Add photos<input
+                  id="post-media"
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp"
+                  multiple /></label
+              ><button type="submit">Create post →</button>
+            </div>
+            <p class="post-upload-hint">Up to 10 photos per post · JPG, PNG or WebP · up to 1.5 MB each</p>
+            <p class="form-message" id="post-message" role="status"></p>
+          </form>
+          <section class="creative-feed-section" aria-labelledby="posts-title">
+            <div class="feed-heading">
+              <h2 id="posts-title">Posts</h2>
+            </div>
+            <p id="post-gallery-status" role="status"></p>
+            <div id="creative-post-feed"></div>
+          </section>
+        </section>
+      </div>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="../freelancer-work.js"></script>
+    <script data-app-src="../cover-editor.js"></script>
+    <script data-app-src="profile.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>

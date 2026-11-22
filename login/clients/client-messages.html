@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messages | Envisage</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../workspace-layout.css" />
+  </head>
+  <body class="booking-page workspace-list-page workspace-polished">
+    <header class="app-header">
+      <a class="brand" href="discovery.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <nav>
+        <a href="discovery.html">Discover</a><a href="client-bookings.html">My bookings</a
+        ><a class="active" href="client-messages.html">Messages</a
+        ><a href="client-profile.html">Profile</a>
+      </nav>
+      <button class="user-chip" type="button" data-workspace-logout="../auth/login.html">
+        Log out
+      </button>
+    </header>
+    <main class="booking-main">
+      <div class="booking-heading"><div><h1>Messages</h1><p>Chat with your freelancer about bookings and payments.</p></div></div>
+      <div class="notification-list" id="client-message-list"></div>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="../booking-inbox.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Availability | Envisage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../workspace-layout.css" />
+  </head>
+  <body class="availability-page workspace-polished">
+    <header class="app-header">
+      <a class="brand" href="availability.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <nav>
+        <a class="active" href="availability.html">Availability</a>
+        <a href="bookings.html">My bookings</a>
+        <a href="inquiries.html">Messages</a>
+        <a href="profile.html">Profile</a>
+        <a href="notifications.html">Notifications</a>
+      </nav>
+      <button class="user-chip freelancer-logout-control" type="button" data-workspace-logout="../auth/login.html">
+        Log out
+      </button>
+    </header>
+    <main class="availability-main">
+      <section class="freelancer-snapshot" aria-label="Creative profile summary">
+        <div class="snapshot-avatar" id="profile-initials">CR</div>
+        <div class="snapshot-main">
+          <h1 id="profile-name">Your creative profile</h1>
+          <p id="profile-description-summary">
+            Add your overview, services, and rate so clients can understand your work before sending
+            a request.
+          </p>
+        </div>
+        <div class="snapshot-meta">
+          <span id="profile-services">Profile incomplete</span
+          ><span id="profile-rate">Starting rate not set</span
+          ><a href="freelancer-profile.html">Edit profile →</a>
+        </div>
+      </section>
+      <div class="availability-heading">
+        <div>
+          <h2>Calendar</h2>
+        </div>
+        <p>
+          Block personal time and work booked outside Envisage. Clients only see whether a date or
+          time is available—not the reason.
+        </p>
+      </div>
+      <div class="schedule-overview">
+        <article>
+          <span class="schedule-dot available-dot"></span>
+          <div>
+            <strong>Available by default</strong><small>Open dates can receive a request.</small>
+          </div>
+        </article>
+        <article>
+          <span class="schedule-dot blocked-dot"></span>
+          <div>
+            <strong id="blocked-count">0 blocked dates</strong
+            ><small>Private details stay hidden from clients.</small>
+          </div>
+        </article>
+        <a href="bookings.html"
+          ><span class="schedule-dot booking-dot"></span>
+          <div>
+            <strong>Review booking requests</strong
+            ><small>Accept only work that fits your schedule.</small>
+          </div></a
+        >
+      </div>
+      <div class="availability-layout">
+        <section class="calendar-panel">
+          <div class="calendar-heading">
+            <button id="previous-month" type="button" aria-label="Previous month">←</button>
+            <div>
+              <p class="eyebrow">SELECT A DATE</p>
+              <h3 id="calendar-month"></h3>
+            </div>
+            <button id="next-month" type="button" aria-label="Next month">→</button>
+          </div>
+          <div class="calendar-weekdays">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span
+            ><span>Fri</span><span>Sat</span>
+          </div>
+          <div class="calendar-grid" id="calendar-grid"></div>
+          <p class="calendar-legend">
+            <span></span> Available &nbsp;&nbsp; <i></i> Booked / unavailable
+          </p>
+        </section>
+        <aside class="block-panel">
+          <p class="eyebrow">BOOK A DATE</p>
+          <h2>Unavailable time</h2>
+          <p>
+            Use a whole-day block for an external booking, rest day, or travel. Clients only see
+            whether the date is available.
+          </p>
+          <form id="block-form">
+            <label for="block-date">Date</label><input id="block-date" type="date" required /><label
+              for="block-reason"
+              >Schedule type</label
+            ><select id="block-reason">
+              <option>External booking</option>
+              <option>Personal time</option>
+              <option>Travel</option></select
+            ><label for="block-label">Event / project label <small>(private)</small></label
+            ><input
+              id="block-label"
+              type="text"
+              maxlength="50"
+              placeholder="e.g. Wedding — Santos"
+            /><label>Calendar color <small>(private)</small></label
+            ><select id="block-color" hidden>
+              <option value="amber">Amber</option>
+              <option value="rose">Rose</option>
+              <option value="violet">Violet</option>
+              <option value="blue">Blue</option>
+              <option value="teal">Teal</option>
+            </select>
+            <fieldset class="calendar-color-options">
+              <legend class="visually-hidden">Calendar color</legend>
+              <label
+                ><input type="radio" name="calendar-color" value="amber" checked /><span
+                  class="color-dot amber"
+                ></span
+                >Amber</label
+              ><label
+                ><input type="radio" name="calendar-color" value="rose" /><span
+                  class="color-dot rose"
+                ></span
+                >Rose</label
+              ><label
+                ><input type="radio" name="calendar-color" value="violet" /><span
+                  class="color-dot violet"
+                ></span
+                >Violet</label
+              ><label
+                ><input type="radio" name="calendar-color" value="blue" /><span
+                  class="color-dot blue"
+                ></span
+                >Blue</label
+              ><label
+                ><input type="radio" name="calendar-color" value="teal" /><span
+                  class="color-dot teal"
+                ></span
+                >Teal</label
+              >
+            </fieldset>
+            <label class="all-day-option"
+              ><input id="all-day" type="checkbox" checked /><span class="checkmark"></span> Block
+              whole day</label
+            >
+            <div class="block-times" id="block-times" hidden>
+              <div>
+                <label for="block-start">Start</label
+                ><input id="block-start" type="time" value="09:00" />
+              </div>
+              <div>
+                <label for="block-end">End</label><input id="block-end" type="time" value="17:00" />
+              </div>
+            </div>
+            <button class="submit" type="submit">Book <span>→</span></button>
+            <p class="form-message" id="block-message" role="status"></p>
+          </form>
+          <div class="saved-blocks">
+            <div class="saved-blocks-heading">
+              <h3>Upcoming blocks</h3>
+              <span id="saved-block-total">0</span>
+            </div>
+            <ul id="saved-blocks"></ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="availability.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>

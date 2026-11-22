@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client profile | Envisage</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../workspace-layout.css" />
+    <link rel="stylesheet" href="client-profile-layout.css" />
+  </head>
+  <body class="simple-page profile-settings-page workspace-polished">
+    <header class="app-header">
+      <a class="brand" href="discovery.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      >
+      <nav>
+        <a href="discovery.html">Discover</a><a href="client-bookings.html">My bookings</a
+        ><a href="client-messages.html">Messages</a
+        ><a class="active" href="client-profile.html">Profile</a>
+      </nav>
+      <button class="user-chip" type="button" data-workspace-logout="../auth/login.html">
+        Log out
+      </button>
+    </header>
+    <main class="account-card client-profile-card">
+      <a class="back-link" href="discovery.html">← Back to discovery</a>
+      <h1 class="account-title">Your profile</h1>
+      <p class="account-copy">
+        Your details are shared only with freelancers you contact through an inquiry.
+      </p>
+      <form id="client-profile-form"><fieldset class="profile-section"><legend>Personal details</legend><p class="section-help">Your name and photo help freelancers recognize you.</p>
+        <div class="photo-upload">
+          <div class="profile-photo-preview">
+            <span id="client-photo-initials">C</span
+            ><img id="client-photo-image" alt="Client profile preview" hidden />
+          </div>
+          <div>
+            <label for="client-photo">Profile photo <small>(optional)</small></label
+            ><input id="client-photo" type="file" accept="image/png,image/jpeg,image/webp" />
+            <p>Use a clear photo so freelancers know who they are speaking with.</p>
+          </div>
+        </div>
+        <label for="client-name">Name</label
+        ><input id="client-name" type="text" autocomplete="name" required />
+        <label for="client-phone">Mobile number <small>(optional)</small></label
+        ><input id="client-phone" type="tel" placeholder="e.g. 0917 123 4567" autocomplete="tel" />
+        </fieldset><fieldset class="profile-section"><legend>Event location & contact</legend><p class="section-help">Keep these details ready for your next inquiry.</p>
+        <label for="client-barangay">Usual barangay</label
+        ><select id="client-barangay">
+          <option value="">Choose a barangay</option>
+          <option>Bagong Silang</option>
+          <option>Calendola</option>
+          <option>Chrysanthemum</option>
+          <option>Cuyab</option>
+          <option>Estrella</option>
+          <option>Fatima</option>
+          <option>G.S.I.S.</option>
+          <option>Landayan</option>
+          <option>Langgam</option>
+          <option>Laram</option>
+          <option>Magsaysay</option>
+          <option>Maharlika</option>
+          <option>Narra</option>
+          <option>Nueva</option>
+          <option>Pacita 1</option>
+          <option>Pacita 2</option>
+          <option>Poblacion</option>
+          <option>Riverside</option>
+          <option>Rosario</option>
+          <option>Sampaguita Village</option>
+          <option>San Antonio</option>
+          <option>San Lorenzo Ruiz</option>
+          <option>San Roque</option>
+          <option>San Vicente</option>
+          <option>Santo Niño</option>
+          <option>United Bayanihan</option>
+          <option>United Better Living</option>
+        </select>
+        <label for="client-address">Address <small>(optional)</small></label
+        ><input
+          id="client-address"
+          type="text"
+          placeholder="House/unit, street, subdivision"
+          autocomplete="street-address"
+        />
+        <label for="client-facebook">Facebook account name <small>(optional)</small></label
+        ><input
+          id="client-facebook"
+          type="text"
+          placeholder="e.g. Maria Santos"
+          autocomplete="off"
+        />
+        </fieldset><button class="submit" type="submit">Save profile <span>→</span></button>
+        <p class="form-message" id="client-profile-message" role="status"></p>
+      </form>
+      <button class="logout-button" id="logout-button" type="button">Log out</button>
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="client-profile.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>

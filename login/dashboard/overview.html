@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Envisage dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="simple-page">
+    <main class="account-card success-card">
+      <a class="brand account-brand" href="../auth/login.html"
+        ><span class="brand-mark">E</span><span>envisage</span></a
+      ><a class="back-link" href="../auth/login.html">← Back to sign in</a>
+      <p class="eyebrow">ACCOUNT READY</p>
+      <h1 class="account-title">You’re all set.</h1>
+      <p class="account-copy" id="dashboard-message">Your Envisage dashboard is ready.</p>
+      <a class="submit dashboard-link" id="dashboard-link" href="../clients/discovery.html"
+        >Explore Envisage <span>→</span></a
+      >
+    </main>
+    <script src="../supabase-config.js"></script>
+    <script src="../backend.js"></script>
+    <script data-app-src="../dashboard.js"></script>
+    <script data-app-src="../navigation-controls.js"></script>
+    <script src="../workspace.js"></script>
+  </body>
+</html>

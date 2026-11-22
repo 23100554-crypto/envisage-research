@@ -1,0 +1,21 @@
+/* Standalone sign-in sizing; existing font families and weights are inherited. */
+.signin-page:not(.auth-modal-page) .login-panel{padding:64px clamp(28px,5vw,96px);gap:24px}
+.signin-page:not(.auth-modal-page) .login-inner{width:100%;max-width:520px}
+.signin-page:not(.auth-modal-page) .login-heading{margin-bottom:32px}
+.signin-page:not(.auth-modal-page) .login-heading h2{font-size:34px;line-height:1.3}
+.signin-page:not(.auth-modal-page) .role-switch{margin-bottom:28px}
+.signin-page:not(.auth-modal-page) .role{font-size:15px;min-height:48px}
+.signin-page:not(.auth-modal-page) #login-form>label{font-size:15px;margin-top:20px;margin-bottom:8px}
+.signin-page:not(.auth-modal-page) #login-form input:not([type=checkbox]){font-size:16px;min-height:50px}
+.signin-page:not(.auth-modal-page) #login-form>label.remember{font-size:14px;line-height:1.6;margin:20px 0;min-height:28px;gap:10px}
+.signin-page:not(.auth-modal-page) .remember .checkmark{width:18px;height:18px;flex-basis:18px}
+.signin-page:not(.auth-modal-page) .remember input{width:18px;height:18px}
+.signin-page:not(.auth-modal-page) .signin-recovery,.signin-page:not(.auth-modal-page) .signin-recovery a{font-size:14px;line-height:1.7}
+.signin-page:not(.auth-modal-page) .submit{font-size:16px;min-height:50px}
+.signin-page:not(.auth-modal-page) .signup,.signin-page:not(.auth-modal-page) .form-message{font-size:14px;line-height:1.8}
+.signin-page:not(.auth-modal-page) .terms{position:static;font-size:13px;line-height:1.8;margin:24px auto 0;max-width:520px;text-align:center}
+.signin-page:not(.auth-modal-page) .art-copy .intro{font-size:16px;line-height:1.8;max-width:480px}
+.signin-page:not(.auth-modal-page) .discover-row{font-size:11px}
+@media(max-width:600px){.signin-page:not(.auth-modal-page) .login-panel{padding:36px 24px}.signin-page:not(.auth-modal-page) .login-heading h2{font-size:28px}.signin-page:not(.auth-modal-page) .role{font-size:14px}}
+
+.signin-page:not(.auth-modal-page) .login-panel{flex-direction:column}
